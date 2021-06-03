@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root {
+    --primary-color: #05be53;
+    --primary-color-hover: #00913e;
+    --red: #d6251a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    font-family: 'Montserrat';
+    color: #4d4d4d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    color: #00913e;
+}
+select,
+input,
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+label {
+    float: left;
+    font-weight: bold;
+}
+.image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.537), rgba(0, 0, 0, 0)),
+        url('./images/edited-hero.png');
+    height: 90%;
+    width: 100%;
+    background-position: 100% 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 9em;
+}
+.navigation {
+    z-index: 2;
+    top: 0;
+}
+.homeJumbotron {
+    min-height: 80%;
+}
+.secondary-btn {
+    background-color: #05be53;
+}
+.secondary-btn:hover,
+.secondary-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #00913e;
+}
+.btn-other {
+    border-width: 0.13em !important;
+}
+.btn-other:hover,
+.btn-other:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #00913e !important;
+    color: #00913e !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading,
+.paragraph {
+    font-weight: 900;
+    width: 40vw;
+}
+.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+.paragraph {
+    font-size: small;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.custom_card {
+    margin: -11vh 8% 20vh 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px 10px 0 0;
+}
+.btn-red {
+    background-color: var(--red);
+    color: #fff;
+}
+.btn-red:hover {
+    color: #fff !important;
+    background: red;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width: 990px) {
+    .image {
+        background-position: 100% 75%;
+        /* background-size: auto;
+        padding-left: 2em; */
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 500px) {
+    .navigation {
+        border: none !important;
+    }
+    .image {
+        background-position: 85% 45%;
+        background-size: auto;
+        padding-left: 2em;
+    }
+    .heading {
+        width: 100%;
+    }
+    .paragraph {
+        width: 100%;
+    }
+    .custom_card {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+    .card-form {
+        text-align: left !important;
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .image {
+        background-position: 90% 40%;
+        background-size: cover;
+        padding-left: 2em;
+    }
 }
