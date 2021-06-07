@@ -1,0 +1,9 @@
+.text_sm_left {
+    text-align: center;
+}
+
+@media only screen and (min-width: 576px) {
+    .text_sm_left {
+        text-align: left !important;
+    }
+}

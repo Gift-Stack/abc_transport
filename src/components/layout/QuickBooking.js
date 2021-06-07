@@ -1,11 +1,17 @@
+import QuickBookingItems from './QuickBookingItems';
+
 const QuickBooking = () => {
     return (
-        <div className='px-2 mx-lg-5 mx-sm-2'>
-            <div className='d-flex align-items-center '>
-                <h2>Quick Booking</h2>
-                <div className='border'>g</div>
-                <hr style={{ backgroundColor: 'red' }} />
+        <div className='px-2 mx-sm-5 mx-3'>
+            <div className='row mb-4'>
+                <div className='col-3 col-lg-2'>
+                    <h5 className='text-nowrap'>Quick Book</h5>
+                </div>
+                <div className='col-lg-10 col-9'>
+                    <hr />
+                </div>
             </div>
+            <QuickBookingItems />
         </div>
     );
 };

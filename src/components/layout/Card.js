@@ -6,7 +6,7 @@ const Card = () => {
                 <div className='row'>
                     <div className='col-sm-6 mb-3'>
                         <label className='my-1 text-muted'>Origin</label>
-                        <select className='form-control form-control-sm px-3 text-muted'>
+                        <select className='form-control  px-3 text-muted'>
                             <option>Departure Terminal</option>
                             <option>Abuja</option>
                             <option>Anambra</option>
@@ -16,7 +16,7 @@ const Card = () => {
                     </div>
                     <div className='col-sm-6 mb-3'>
                         <label className='my-1 text-muted'>Destination</label>
-                        <select className='form-control form-control-sm px-3 text-muted'>
+                        <select className='form-control  px-3 text-muted'>
                             <option>Arrival Terminal</option>
                             <option>Abuja</option>
                             <option>Anambra</option>
@@ -26,15 +26,15 @@ const Card = () => {
                     </div>
                     <div className='col-md-4 col-6 mb-3'>
                         <label>Departure date</label>
-                        <input type='date' className='form-control' />
+                        <input type='date' className='form-control ' />
                     </div>
                     <div className='col-md-4 col-6 mb-3'>
                         <label>Arrival date</label>
-                        <input type='date' className='form-control' />
+                        <input type='date' className='form-control ' />
                     </div>
                     <div className='col-md-4 col-sm-12 mb-3'>
                         <label>Passengers</label>
-                        <select className='form-control'>
+                        <select className='form-control '>
                             <option>Passengers</option>
                             <option>1</option>
                             <option>2</option>
@@ -48,7 +48,7 @@ const Card = () => {
                         </select>
                     </div>
                 </div>
-                <button className='col-12 my-3 btn btn-block btn-red'>
+                <button className='col-12 my-3 btn btn-block btn-red btn-lg'>
                     Search
                 </button>
             </form>

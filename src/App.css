@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
 :root {
     --primary-color: #05be53;
     --primary-color-hover: #00913e;
@@ -15,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 900;
+    font-weight: 700;
     color: #00913e;
 }
 select,
@@ -25,9 +28,12 @@ input,
     box-shadow: none !important;
     border-radius: 0 !important;
 }
+.card {
+    border-radius: 0 !important;
+    font-size: small;
+}
 label {
     float: left;
-    font-weight: bold;
 }
 .image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.537), rgba(0, 0, 0, 0)),
@@ -68,11 +74,11 @@ label {
 
 .heading,
 .paragraph {
-    font-weight: 900;
     width: 40vw;
 }
 .heading {
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif !important;
     font-size: 250%;
 }
 .paragraph {
@@ -93,12 +99,38 @@ label {
     color: #fff !important;
     background: red;
 }
+.text-sm-left {
+    text-align: center;
+}
+.btn-sub {
+    border-width: 0.13em !important;
+    border-color: #00913e !important;
+    color: #00913e !important;
+}
+.btn-sub:hover,
+.btn-sub:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
 @media only screen and (max-width: 990px) {
     .image {
         background-position: 100% 75%;
+
         /* background-size: auto;
         padding-left: 2em; */
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .image {
+        padding-left: 6em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .image {
+        padding-left: 4em;
     }
 }
 
@@ -109,17 +141,20 @@ label {
     .image {
         background-position: 85% 45%;
         background-size: auto;
-        padding-left: 2em;
+        padding: 0 4em 0 2em;
     }
     .heading {
         width: 100%;
     }
     .paragraph {
         width: 100%;
+        font-size: initial;
     }
     .custom_card {
         padding-left: 0% !important;
         padding-right: 0% !important;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .card-form {
         text-align: left !important;
@@ -132,6 +167,16 @@ label {
     .image {
         background-position: 90% 40%;
         background-size: cover;
-        padding-left: 2em;
+        /* padding-left: 1em; */
+        /* padding: 0 4em 0 2em; */
+    }
+    .heading,
+    .paragraph {
+        width: 80vw;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .text-sm-left {
+        text-align: left !important;
     }
 }

@@ -33,8 +33,8 @@ const Navbar = () => {
                     id='navbarSupportedContent'
                 >
                     <ul
-                        className='navbar-nav text-center d-flex justify-content-between align-items-center font-weight-bold'
-                        style={{ fontWeight: 'bolder', fontSize: 'small' }}
+                        className='navbar-nav text-center d-flex justify-content-between align-items-center'
+                        style={{ fontWeight: 'bold', fontSize: 'small' }}
                     >
                         <li className='nav-item px-1 my-1  active'>
                             <Link className='nav-link text-white' to='/about'>
