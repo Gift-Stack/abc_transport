@@ -30,7 +30,7 @@ input,
 }
 .card {
     border-radius: 0 !important;
-    font-size: small;
+    font-size: smaller;
 }
 label {
     float: left;
@@ -82,7 +82,7 @@ label {
     font-size: 250%;
 }
 .paragraph {
-    font-size: small;
+    font-size: smaller;
 }
 
 .custom_card {
