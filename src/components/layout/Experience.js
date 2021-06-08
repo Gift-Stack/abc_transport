@@ -15,7 +15,7 @@ const Experience = () => {
                 <div className='col-sm-6 order-first order-sm-first d-flex align-items-center'>
                     <div className='text-left pr-3 px-4 px-sm-0 mr-sm-5'>
                         <h5>Comfortable travel experience</h5>
-                        <p style={{ fontSize: 'small' }}>
+                        <p style={{ fontSize: 'smaller' }}>
                             It is a long establish fact that a reader will be
                             distracted by the readable content of a page when
                             looking at its layout. The point of using Lorem
