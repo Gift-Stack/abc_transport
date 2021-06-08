@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
 import lady from '../../images/lady.jpg';
 
-// import 'bootstrap-icons';
-
-import { IconContext } from 'react-icons';
-import { FaCheckCircle } from 'react-icons/fa';
-import { AiFillCheckCircle } from 'react-icons/ai';
-
 const Experience = () => {
     return (
         <div className='overflow-hidden '>
@@ -31,10 +25,35 @@ const Experience = () => {
                             readable English. Many desktop publishing packages
                         </p>
 
-                        <i
-                            class='bi bi-alarm'
-                            style={{ color: 'blueviolet' }}
-                        ></i>
+                        <div
+                            className='row my-4'
+                            style={{ fontSize: 'smaller', fontWeight: 'bold' }}
+                        >
+                            <div className='col-6'>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>Charging point</p>
+                                </div>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>Emergency exit</p>
+                                </div>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>Fire extinguisher</p>
+                                </div>
+                            </div>
+                            <div className='col-6'>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>Safety concious</p>
+                                </div>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>More legroom</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <Link
                             to='/about'
