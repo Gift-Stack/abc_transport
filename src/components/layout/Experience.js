@@ -10,6 +10,7 @@ const Experience = () => {
                         src={lady}
                         alt='abctransport lady experience'
                         width='100%'
+                        // height='100'
                     />
                 </div>
                 <div className='col-sm-6 order-first order-sm-first d-flex align-items-center'>
@@ -38,10 +39,6 @@ const Experience = () => {
                                     <i className='bi bi-check-circle-fill text-success'></i>
                                     <p className='px-3'>Emergency exit</p>
                                 </div>
-                                <div className='d-flex'>
-                                    <i className='bi bi-check-circle-fill text-success'></i>
-                                    <p className='px-3'>Fire extinguisher</p>
-                                </div>
                             </div>
                             <div className='col-6'>
                                 <div className='d-flex'>
@@ -51,6 +48,12 @@ const Experience = () => {
                                 <div className='d-flex'>
                                     <i className='bi bi-check-circle-fill text-success'></i>
                                     <p className='px-3'>More legroom</p>
+                                </div>
+                            </div>
+                            <div className='col-12'>
+                                <div className='d-flex'>
+                                    <i className='bi bi-check-circle-fill text-success'></i>
+                                    <p className='px-3'>Fire extinguisher</p>
                                 </div>
                             </div>
                         </div>
