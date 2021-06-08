@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import lady from '../../images/lady.jpg';
 
+// import 'bootstrap-icons';
+
 import { IconContext } from 'react-icons';
 import { FaCheckCircle } from 'react-icons/fa';
+import { AiFillCheckCircle } from 'react-icons/ai';
 
 const Experience = () => {
     return (
@@ -27,16 +30,12 @@ const Experience = () => {
                             'Content here,content here', making it look like
                             readable English. Many desktop publishing packages
                         </p>
-                        {/*  */}
-                        <IconContext.Provider
-                            value={{
-                                color: 'blue',
-                                className: 'global-class-name',
-                            }}
-                        >
-                            <FaCheckCircle />
-                        </IconContext.Provider>
-                        {/*  */}
+
+                        <i
+                            class='bi bi-alarm'
+                            style={{ color: 'blueviolet' }}
+                        ></i>
+
                         <Link
                             to='/about'
                             className='btn btn-sub py-2 px-2'
