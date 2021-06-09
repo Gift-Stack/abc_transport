@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import lady from '../../images/lady.jpg';
 
+import styles from '../../module_css/experience.module.css';
+
 const Experience = () => {
     return (
         <div className='overflow-hidden '>
@@ -10,7 +12,6 @@ const Experience = () => {
                         src={lady}
                         alt='abctransport lady experience'
                         width='100%'
-                        // height='100'
                     />
                 </div>
                 <div className='col-sm-6 order-first order-sm-first d-flex align-items-center'>
@@ -27,8 +28,8 @@ const Experience = () => {
                         </p>
 
                         <div
-                            className='row my-4'
-                            style={{ fontSize: 'smaller', fontWeight: 'bold' }}
+                            className={`row my-4 ${styles.experienceList}`}
+                            // style={{ fontSize: 'smaller', fontWeight: 'bold' }}
                         >
                             <div className='col-6'>
                                 <div className='d-flex'>
