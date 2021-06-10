@@ -1,9 +1,21 @@
 .root {
+    position: relative;
     padding-left: 6%;
     padding-right: 6%;
-    margin-top: 16vh;
+    padding-top: 16vh;
+    overflow: hidden;
 }
 
+.mobileApp {
+    /* position: relative; */
+
+    position: absolute;
+    margin-top: -4.4em;
+    right: 0;
+}
+.jumbotronContent {
+    display: initial;
+}
 .head {
     color: #fff;
     font-weight: bold;
@@ -18,11 +30,65 @@
 .store {
     margin-top: -40px;
     margin-bottom: -40px;
+    /* cursor: pointer; */
 }
 .storeGoogle {
     margin-right: -35px;
     margin-left: -7px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 880px) {
+    .mobileApp {
+        right: -50px;
+        margin-left: -100px;
+        margin-right: -10px;
+    }
+    .head {
+        max-width: 40%;
+    }
+    .body {
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .mobileApp {
+        right: -80px;
+    }
+    .head {
+        max-width: 45%;
+    }
+    .body {
+        max-width: 55%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .mobileApp {
+        right: -95px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .root {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .mobileApp {
+        right: -6.6em;
+    }
+}
+/* @media only screen and (max-width: 640px) {
+    .mobileApp {
+        right: -7.5em;
+    }
+}
+@media only screen and (max-width: 630px) {
+    .mobileApp {
+        right: -7.9em;
+    }
+} */
+
+@media only screen and (max-width: 576px) {
+    .jumbotronContent {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }
