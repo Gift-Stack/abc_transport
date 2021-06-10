@@ -2,3 +2,12 @@
     font-size: smaller;
     font-weight: bold;
 }
+
+.learnMore {
+    font-weight: bolder;
+    font-size: small;
+}
+.learnMore:hover {
+    background: #000 !important;
+    color: #fff;
+}

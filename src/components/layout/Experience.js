@@ -61,11 +61,7 @@ const Experience = () => {
 
                         <Link
                             to='/about'
-                            className='btn btn-sub py-2 px-2'
-                            style={{
-                                fontWeight: 'bolder',
-                                fontSize: 'small',
-                            }}
+                            className={`btn btn-sub py-2 px-2 ${styles.learnMore}`}
                         >
                             LEARN MORE
                         </Link>

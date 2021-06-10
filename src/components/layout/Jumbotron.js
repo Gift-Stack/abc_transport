@@ -11,7 +11,10 @@ const Jumbotron = () => {
                 <img src={abcmobile} alt='ABC mobile app' height='500px' />
             </div>
             <div
-                className={`jumbotron ${styles.jumbotronContent} rounded jumbotron-fluid`}
+                className={
+                    'jumbotron rounded jumbotron-fluid' +
+                    styles.jumbotronContent
+                }
             >
                 <div className='container px-md-5 px-sm-2'>
                     <p className={`${styles.head} lead`}>
