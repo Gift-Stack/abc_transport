@@ -49,8 +49,8 @@ const Jumbotron = () => {
             iste corporis laboriosam tempore ipsam libero eum. Maiores molestias
             asperiores eos qui rem minus architecto esse soluta. Ad eos, iusto
             recusandae maiores quod, provident vero quo quidem dignissimos
-            explicabo perspiciatis illum unde sit. Debitis praesentium non
-            incidunt explicabo error?
+            explicabo perspiciatis illum unde sit. Debitpraesentium non incidunt
+            explicabo error?
         </div>
     );
 };
