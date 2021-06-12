@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "take-abc"
+  },
+  "targets": {
+    "take-abc": {
+      "hosting": {
+        "abctransport": [
+          "abctransport"
+        ]
+      }
+    }
   }
 }
