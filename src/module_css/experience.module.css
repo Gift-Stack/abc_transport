@@ -3,7 +3,7 @@
     font-weight: bold;
 }
 
-/* .learnMore {
+.learnMore {
     font-weight: bolder;
     font-size: small;
     transition: background 0.3s linear, color 0.3s ease-in-out;
@@ -11,4 +11,4 @@
 .learnMore:hover {
     background: #00913e !important;
     color: #fff !important;
-} */
+}
