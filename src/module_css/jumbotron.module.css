@@ -1,4 +1,5 @@
 .root {
+    display: auto;
     position: relative;
     padding-left: 6%;
     padding-right: 6%;
@@ -15,7 +16,7 @@
     right: 0;
 }
 .jumbotronContent {
-    display: initial;
+    display: auto;
 }
 .head {
     color: #fff;
@@ -87,9 +88,41 @@
     }
 } */
 
-@media only screen and (max-width: 576px) {
+/* @media only screen and (max-width: 576px) {
     .jumbotronContent {
         display: flex !important;
         flex-direction: column !important;
+    }
+} */
+
+@media only screen and (max-width: 660px) {
+    .root {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .mobileApp {
+        position: absolute;
+        margin-top: 10em;
+        left: 50%;
+        margin-left: calc(-1169px / 2);
+    }
+    .head,
+    .body {
+        max-width: 100%;
+    }
+    .jumbotronContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .store {
+        display: flex;
+        justify-content: center;
+    }
+    .storeGoogle {
+        margin-right: 0;
+        margin-left: 0;
     }
 }

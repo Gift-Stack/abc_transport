@@ -10,13 +10,12 @@ const Jumbotron = () => {
             <div className={styles.mobileApp}>
                 <img src={abcmobile} alt='ABC mobile app' height='500px' />
             </div>
-            <div
-                className={
-                    'jumbotron rounded jumbotron-fluid' +
-                    styles.jumbotronContent
-                }
-            >
-                <div className='container px-md-5 px-sm-2'>
+            <div className={'jumbotron rounded jumbotron-fluid'}>
+                <div
+                    className={
+                        'container px-md-5 px-sm-2' + styles.jumbotronContent
+                    }
+                >
                     <p className={`${styles.head} lead`}>
                         Download the ABC app for easy booking
                     </p>
@@ -39,18 +38,7 @@ const Jumbotron = () => {
                     />
                 </div>
             </div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero iusto
-            autem eius placeat reprehenderit necessitatibus consequuntur, a
-            atque sequi aliquid mollitia minus labore laborum itaque officiis
-            veniam praesentium enim tempora? Aliquid aspernatur maiores unde a
-            voluptate quia dolore earum ex illo provident hic deserunt nisi,
-            perspiciatis neque! Sint facere pariatur dolore obcaecati magni,
-            maiores consequuntur soluta vel eaque, dolor exercitationem maxime
-            iste corporis laboriosam tempore ipsam libero eum. Maiores molestias
-            asperiores eos qui rem minus architecto esse soluta. Ad eos, iusto
-            recusandae maiores quod, provident vero quo quidem dignissimos
-            explicabo perspiciatis illum unde sit. Debitpraesentium non incidunt
-            explicabo error?
+            <div style={{ height: 300 }}></div>
         </div>
     );
 };
