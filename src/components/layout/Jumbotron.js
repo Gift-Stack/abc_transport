@@ -10,11 +10,11 @@ const Jumbotron = () => {
             <div className={styles.mobileApp}>
                 <img src={abcmobile} alt='ABC mobile app' height='500px' />
             </div>
-            <div className={'jumbotron rounded jumbotron-fluid'}>
+            <div
+                className={`${styles.jumbotron} jumbotron rounded jumbotron-fluid`}
+            >
                 <div
-                    className={
-                        'container px-md-5 px-sm-2' + styles.jumbotronContent
-                    }
+                    className={`container px-md-5 px-sm-2  ${styles.jumbotronContent}`}
                 >
                     <p className={`${styles.head} lead`}>
                         Download the ABC app for easy booking
