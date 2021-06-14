@@ -7,9 +7,6 @@ import styles from '../../module_css/jumbotron.module.css';
 const Jumbotron = () => {
     return (
         <div className={styles.root}>
-            <div className={styles.mobileApp}>
-                <img src={abcmobile} alt='ABC mobile app' height='500px' />
-            </div>
             <div
                 className={`${styles.jumbotron} jumbotron rounded jumbotron-fluid`}
             >
@@ -37,6 +34,9 @@ const Jumbotron = () => {
                         className={styles.store}
                     />
                 </div>
+            </div>
+            <div className={styles.mobileApp}>
+                <img src={abcmobile} alt='ABC mobile app' height='500px' />
             </div>
             <div style={{ height: 300 }}></div>
         </div>

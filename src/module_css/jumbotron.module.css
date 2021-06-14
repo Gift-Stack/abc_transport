@@ -9,10 +9,8 @@
 }
 
 .mobileApp {
-    /* position: relative; */
-
     position: absolute;
-    margin-top: -4.4em;
+    margin-top: -28.4em;
     right: 0;
 }
 .jumbotron {
@@ -35,7 +33,6 @@
 .store {
     margin-top: -40px;
     margin-bottom: -40px;
-    /* cursor: pointer; */
 }
 .storeGoogle {
     margin-right: -35px;
@@ -48,6 +45,7 @@
         right: -50px;
         margin-left: -100px;
         margin-right: -10px;
+        margin-top: -27.4em;
     }
     .head {
         max-width: 40%;
@@ -81,12 +79,13 @@
     .jumbotron {
         border-radius: 0 !important;
     }
-    .mobileApp {
-        position: absolute;
-        margin-top: 10em;
-        left: 50%;
-        margin-left: calc(-1169px / 2);
-        display: none;
+
+    .jumbotronContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 30px 370px 30px;
     }
     .head,
     .body {
@@ -94,13 +93,6 @@
     }
     .body {
         font-size: medium;
-    }
-    .jumbotronContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 30px 100px 30px;
     }
     .store {
         display: flex;
@@ -112,5 +104,12 @@
         margin-right: 0;
         margin-left: 0;
         width: 185px;
+    }
+    .mobileApp {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin-top: -370px;
     }
 }
