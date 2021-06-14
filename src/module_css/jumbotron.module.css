@@ -1,9 +1,3 @@
-/* :root {
-    --primary-color: #05be53;
-    --primary-color-hover: #00913e;
-    --red: #d6251a;
-} */
-
 .root {
     display: auto;
     position: relative;
@@ -78,24 +72,11 @@
         right: -95px;
     }
 }
-/* @media only screen and (max-width: 650px) {
-    .root {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-    .mobileApp {
-        right: -6.6em;
-    }
-} */
 @media only screen and (max-width: 660px) {
     .root {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
-        padding-left: 0% !important;
-        padding-right: 0% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     .jumbotron {
         border-radius: 0 !important;
@@ -114,6 +95,8 @@
     .jumbotronContent {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 80px;
     }
     .store {
