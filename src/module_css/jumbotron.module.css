@@ -90,7 +90,10 @@
     }
     .head,
     .body {
-        max-width: 100%;
+        max-width: 70%;
+    }
+    .body {
+        font-size: large;
     }
     .jumbotronContent {
         display: flex;
@@ -102,11 +105,12 @@
     .store {
         display: flex;
         justify-content: center;
-        max-width: 100%;
+        width: 400px;
     }
     .storeGoogle {
         display: block;
         margin-right: 0;
         margin-left: 0;
+        width: 255px;
     }
 }
