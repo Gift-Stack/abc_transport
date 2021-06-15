@@ -9,10 +9,10 @@ const Services = () => {
             align={'center'}
             className='container d-flex justify-content-around overflow-hidden'
         >
-            <img src={Sprinter} alt='Sprinter image' width='15%' />
-            <img src={Transit} alt='Transit image' width='15%' />
-            <img src={Coach} alt='Coach image' width='15%' />
-            <img src={Cargo} alt='Cargo image' width='15%' />
+            <img src={Sprinter} alt='Sprinter' width='15%' />
+            <img src={Transit} alt='Transit' width='15%' />
+            <img src={Coach} alt='Coach' width='15%' />
+            <img src={Cargo} alt='Cargo' width='15%' />
         </div>
     );
 };
