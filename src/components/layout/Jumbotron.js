@@ -38,7 +38,7 @@ const Jumbotron = () => {
             <div className={styles.mobileApp}>
                 <img src={abcmobile} alt='ABC mobile app' height='500px' />
             </div>
-            <div style={{ height: 300 }}></div>
+            <div style={{ height: 200 }}></div>
         </div>
     );
 };

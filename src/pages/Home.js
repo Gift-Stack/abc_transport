@@ -3,6 +3,7 @@ import Card from '../components/layout/Card';
 import Experience from '../components/layout/Experience';
 import Jumbotron from '../components/layout/Jumbotron';
 import QuickBooking from '../components/layout/QuickBooking';
+import Services from '../components/layout/Services';
 import Navbar from '../components/Navbar/Navbar';
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
             <Advantages />
             <Experience />
             <Jumbotron />
+            <Services />
         </div>
     );
 };
