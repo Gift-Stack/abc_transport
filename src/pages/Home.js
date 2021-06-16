@@ -29,7 +29,7 @@ const Home = () => {
             <Experience />
             <Jumbotron />
             <Services />
-            <div style={{ height: 100 }}></div>
+            <div style={{ height: 80 }}></div>
             <Footer />
         </div>
     );
