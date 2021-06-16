@@ -1,10 +1,10 @@
 import styles from '../../module_css/footer.module.css';
 const Footer = () => {
     return (
-        <div className='bg-dark py-5 overflow-hidden'>
+        <div className='bg-dark py-5 overflow-hidden' style={{ width: '100%' }}>
             <footer className='page-footer font-small mdb-color pt-4'>
                 <div className='container text-center text-md-left'>
-                    <div className='row text-center text-md-left mt-3 pb-3'>
+                    <div className='row text-center text-md-left mt-3 pb-3 '>
                         <div className='col-md-3 col-lg-2 col-xl-2 mx-auto mt-3'>
                             <h6 className={`mb-4 ${styles.heading}`}>
                                 Quick links
