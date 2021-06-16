@@ -1,0 +1,9 @@
+.white {
+    color: white !important;
+    font-size: small !important;
+}
+.heading {
+    color: white !important;
+    font-weight: bold;
+    font-size: medium;
+}

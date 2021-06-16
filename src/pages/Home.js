@@ -1,6 +1,7 @@
 import Advantages from '../components/layout/Advantages';
 import Card from '../components/layout/Card';
 import Experience from '../components/layout/Experience';
+import Footer from '../components/layout/Footer';
 import Jumbotron from '../components/layout/Jumbotron';
 import QuickBooking from '../components/layout/QuickBooking';
 import Services from '../components/layout/Services';
@@ -28,6 +29,8 @@ const Home = () => {
             <Experience />
             <Jumbotron />
             <Services />
+            <div style={{ height: 100 }}></div>
+            <Footer />
         </div>
     );
 };
