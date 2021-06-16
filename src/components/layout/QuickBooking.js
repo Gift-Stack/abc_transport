@@ -1,5 +1,8 @@
 import QuickBookingItems from './QuickBookingItems';
 
+// import AOS from 'aos';
+// import { useEffect } from 'react';
+
 const QuickBooking = () => {
     return (
         <div className='px-2 mx-sm-5 mx-3'>
@@ -11,7 +14,9 @@ const QuickBooking = () => {
                     <hr />
                 </div>
             </div>
-            <QuickBookingItems />
+            <div data-aos='fade-left'>
+                <QuickBookingItems />
+            </div>
         </div>
     );
 };

@@ -9,7 +9,16 @@ import Hotel from './pages/Hotel';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
+import AOS from 'aos';
+import { useEffect } from 'react';
+
 function App() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            delay: 500,
+        });
+    }, []);
     return (
         <Router>
             <div className='App'>
