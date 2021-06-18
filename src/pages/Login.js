@@ -10,7 +10,7 @@ const Login = () => {
             <div className='col-sm-6'>
                 <img src={LoginImg} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <div className='col-sm-6'>
+            <form className='col-sm-6'>
                 <div className='input-group mb-3'>
                     <div className='input-group-prepend'>
                         <span className='input-group-text' id='basic-addon1'>
@@ -38,18 +38,19 @@ const Login = () => {
                     />
                 </div>
                 <p>
-                    Don't have an account?
+                    Don't have an account?{' '}
                     <Link to='/signup' style={{ color: '#05be53' }}>
                         Sign Up
                     </Link>
                 </p>
                 <button
+                    type='submit'
                     className='btn text-sm btn-block text-white rounded'
                     style={{ background: '#05be53' }}
                 >
                     Login
                 </button>
-            </div>
+            </form>
         </div>
     );
 };

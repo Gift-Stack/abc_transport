@@ -10,7 +10,7 @@ const SignUp = () => {
             <div className='col-sm-6'>
                 <img src={Signup} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <div className='col-sm-6'>
+            <form className='col-sm-6'>
                 <div className='input-group mb-3'>
                     <input
                         type='text'
@@ -44,7 +44,7 @@ const SignUp = () => {
                     />
                 </div>
                 <p>
-                    Already have an account?
+                    Already have an account?{' '}
                     <Link to='/login' style={{ color: '#05be53' }}>
                         Log in
                     </Link>
@@ -55,7 +55,7 @@ const SignUp = () => {
                 >
                     Create account
                 </button>
-            </div>
+            </form>
         </div>
     );
 };
