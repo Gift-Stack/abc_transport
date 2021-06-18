@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import LoginLg from '../images/svg/Login.svg';
-// import LoginSm from '../images/svg/Mobile_login.svg';
+import LoginImg from '../images/svg/Login.svg';
 
 const Login = () => {
     return (
@@ -9,7 +8,7 @@ const Login = () => {
             style={{ height: '100vh', fontSize: 'small' }}
         >
             <div className='col-sm-6'>
-                <img src={LoginLg} alt='DesktopLogin' className='img-fluid' />
+                <img src={LoginImg} alt='DesktopLogin' className='img-fluid' />
             </div>
             <div className='col-sm-6'>
                 <div className='input-group mb-3'>
@@ -20,7 +19,7 @@ const Login = () => {
                     </div>
                     <input
                         type='email'
-                        placeholder='Enter your email'
+                        placeholder='Email'
                         className='form-control'
                         required
                     />
@@ -33,7 +32,7 @@ const Login = () => {
                     </div>
                     <input
                         type='password'
-                        placeholder='Enter your password'
+                        placeholder='Password'
                         className='form-control'
                         required
                     />
