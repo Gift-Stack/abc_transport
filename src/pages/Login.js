@@ -5,13 +5,13 @@ import LoginLg from '../images/svg/Login.svg';
 const Login = () => {
     return (
         <div
-            className='row d-flex align-items-md-center mx-1'
-            style={{ height: '100vh' }}
+            className='row gy-5 d-flex align-items-sm-center align-content-center mx-1'
+            style={{ height: '100vh', fontSize: 'small' }}
         >
-            <div className='col-md-6'>
+            <div className='col-sm-6'>
                 <img src={LoginLg} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <div className='col-md-6'>
+            <div className='col-sm-6'>
                 <div className='input-group mb-3'>
                     <div className='input-group-prepend'>
                         <span className='input-group-text' id='basic-addon1'>
@@ -44,6 +44,12 @@ const Login = () => {
                         Sign Up
                     </Link>
                 </p>
+                <button
+                    className='btn text-sm btn-block text-white rounded'
+                    style={{ background: '#05be53' }}
+                >
+                    Login
+                </button>
             </div>
         </div>
     );
