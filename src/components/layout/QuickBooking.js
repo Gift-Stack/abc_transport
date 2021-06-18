@@ -14,9 +14,7 @@ const QuickBooking = () => {
                     <hr />
                 </div>
             </div>
-            <div data-aos='fade-left'>
-                <QuickBookingItems />
-            </div>
+            <QuickBookingItems />
         </div>
     );
 };
