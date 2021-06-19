@@ -9,30 +9,29 @@ import Hotel from './pages/Hotel';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
-import AOS from 'aos';
-import { useEffect } from 'react';
+import SignUpState from './context/SignupContext/SignUpState';
 
 function App() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            delay: 500,
-        });
-    }, []);
     return (
         <Router>
-            <div className='App'>
-                <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route exact path='/about' component={About} />
-                    <Route exact path='/bookings' component={ManageBooking} />
-                    <Route exact path='/explore' component={Explore} />
-                    <Route exact path='/cargo' component={Cargo} />
-                    <Route exact path='/hotel' component={Hotel} />
-                    <Route exact path='/login' component={Login} />
-                    <Route exact path='/signup' component={SignUp} />
-                </Switch>
-            </div>
+            <SignUpState>
+                <div className='App'>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/about' component={About} />
+                        <Route
+                            exact
+                            path='/bookings'
+                            component={ManageBooking}
+                        />
+                        <Route exact path='/explore' component={Explore} />
+                        <Route exact path='/cargo' component={Cargo} />
+                        <Route exact path='/hotel' component={Hotel} />
+                        <Route exact path='/login' component={Login} />
+                        <Route exact path='/signup' component={SignUp} />
+                    </Switch>
+                </div>
+            </SignUpState>
         </Router>
     );
 }
