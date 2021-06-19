@@ -19,6 +19,8 @@ const SignUpState = ({ children }) => {
         loading: false,
         token: null,
         user: null,
+        isEmailVerified: false,
+        emailVerificationMessage: null,
     };
 
     const [state, dispatch] = useReducer(AuthReducer, initialState);
@@ -28,7 +30,7 @@ const SignUpState = ({ children }) => {
     const addData = async data => {
         const user = firebase.auth().currentUser;
         const { firstName, lastName } = data;
-
+        setLoading();
         user.updateProfile({
             displayName: `${firstName} ${lastName}`,
         })
@@ -81,6 +83,8 @@ const SignUpState = ({ children }) => {
                 loading: state.loading,
                 token: state.token,
                 user: state.user,
+                isEmailVerified: state.isEmailVerified,
+                emailVerificationMessage: state.emailVerificationMessage,
                 setLoading,
                 signUp,
             }}
