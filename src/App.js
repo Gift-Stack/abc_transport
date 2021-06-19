@@ -9,12 +9,12 @@ import Hotel from './pages/Hotel';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
-import SignUpState from './context/SignupContext/SignUpState';
+import AuthState from './context/authContext/AuthState';
 
 function App() {
     return (
         <Router>
-            <SignUpState>
+            <AuthState>
                 <div className='App'>
                     <Switch>
                         <Route exact path='/' component={Home} />
@@ -31,7 +31,7 @@ function App() {
                         <Route exact path='/signup' component={SignUp} />
                     </Switch>
                 </div>
-            </SignUpState>
+            </AuthState>
         </Router>
     );
 }

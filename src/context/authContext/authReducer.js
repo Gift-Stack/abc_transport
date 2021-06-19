@@ -1,4 +1,4 @@
-import { LOADING, SIGN_UP, GET_USER } from '../types';
+import { LOADING, SIGN_UP_SUCCESS, SIGN_UP_FAILED, GET_USER } from '../types';
 
 export default (state, action) => {
     switch (action) {

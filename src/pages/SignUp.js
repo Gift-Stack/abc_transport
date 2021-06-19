@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Signup from '../images/svg/Sign_up.svg';
+import AuthContext from '../context/authContext/authContext';
 
 const SignUp = () => {
+    const authContext = useContext(AuthContext);
+    const { signUp } = authContext;
+
     const [user, setUser] = useState({
         firstName: '',
         lastName: '',
@@ -23,7 +27,7 @@ const SignUp = () => {
                 email !== '' &&
                 password !== ''
             ) {
-                console.log('User created');
+                signUp(user);
 
                 setUser({
                     firstName: '',
