@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Signup from '../images/svg/Sign_up.svg';
 import AuthContext from '../context/authContext/authContext';
+import styles from '../module_css/signupForm.module.css';
 
 const SignUp = () => {
     const authContext = useContext(AuthContext);
@@ -20,6 +21,7 @@ const SignUp = () => {
         setUser({ ...user, [e.target.name]: e.target.value });
     const createUser = e => {
         e.preventDefault();
+        e.target.disabled = true;
         try {
             if (
                 firstName !== '' &&
@@ -48,8 +50,8 @@ const SignUp = () => {
             <div className='col-sm-6'>
                 <img src={Signup} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <form className='col-sm-6 '>
-                <div className='input-group  mb-3'>
+            <form className={`col-sm-6 ${styles.signup_form} was-validated`}>
+                <div className='input-group mb-3'>
                     <input
                         type='text'
                         name='firstName'
@@ -59,9 +61,8 @@ const SignUp = () => {
                         className='form-control'
                         required
                     />
-                    <div className='invalid-feedback'>Well</div>
                 </div>
-                <div className='input-group  mb-3'>
+                <div className='input-group mb-3'>
                     <input
                         type='text'
                         name='lastName'
@@ -72,7 +73,7 @@ const SignUp = () => {
                         required
                     />
                 </div>
-                <div className='input-group  mb-3'>
+                <div className='input-group mb-3'>
                     <input
                         type='email'
                         name='email'
@@ -83,7 +84,7 @@ const SignUp = () => {
                         required
                     />
                 </div>
-                <div className='input-group  mb-3'>
+                <div className='input-group mb-3'>
                     <input
                         type='password'
                         name='password'
@@ -91,6 +92,9 @@ const SignUp = () => {
                         onChange={handleChange}
                         placeholder='Password'
                         className='form-control'
+                        minLength='10'
+                        pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}'
+                        title='Must contain at least one  number and one uppercase and lowercase letter, and at least 10 or more characters'
                         required
                     />
                 </div>
