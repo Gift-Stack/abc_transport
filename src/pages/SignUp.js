@@ -48,8 +48,8 @@ const SignUp = () => {
             <div className='col-sm-6'>
                 <img src={Signup} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <form className='col-sm-6'>
-                <div className='input-group mb-3'>
+            <form className='col-sm-6 '>
+                <div className='input-group  mb-3'>
                     <input
                         type='text'
                         name='firstName'
@@ -59,8 +59,9 @@ const SignUp = () => {
                         className='form-control'
                         required
                     />
+                    <div className='invalid-feedback'>Well</div>
                 </div>
-                <div className='input-group mb-3'>
+                <div className='input-group  mb-3'>
                     <input
                         type='text'
                         name='lastName'
@@ -71,7 +72,7 @@ const SignUp = () => {
                         required
                     />
                 </div>
-                <div className='input-group mb-3'>
+                <div className='input-group  mb-3'>
                     <input
                         type='email'
                         name='email'
@@ -82,7 +83,7 @@ const SignUp = () => {
                         required
                     />
                 </div>
-                <div className='input-group mb-3'>
+                <div className='input-group  mb-3'>
                     <input
                         type='password'
                         name='password'
@@ -100,6 +101,7 @@ const SignUp = () => {
                     </Link>
                 </p>
                 <button
+                    type='submit'
                     className='btn text-sm btn-block text-white rounded'
                     style={{ background: '#05be53' }}
                     onClick={createUser}

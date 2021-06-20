@@ -6,7 +6,7 @@ import {
     ADD_NEW_USER_DATA_FAILED,
     SEND_EMAIL_VERIFICATION_SUCCESS,
     SEND_EMAIL_VERIFICATION_FAILED,
-    GET_USER,
+    // GET_USER,
 } from '../types';
 
 export default (state, action) => {

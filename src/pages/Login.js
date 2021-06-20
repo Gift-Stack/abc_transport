@@ -38,8 +38,9 @@ const Login = () => {
                     />
                 </div>
                 <p>
-                    Don't have an account?{' '}
+                    Don't have an account?
                     <Link to='/signup' style={{ color: '#05be53' }}>
+                        {' '}
                         Sign Up
                     </Link>
                 </p>
