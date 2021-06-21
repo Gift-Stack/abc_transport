@@ -2,12 +2,12 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Signup from '../images/svg/Sign_up.svg';
 import AuthContext from '../context/authContext/authContext';
-import styles from '../module_css/signupForm.module.css';
 
 const SignUp = () => {
     const authContext = useContext(AuthContext);
     const { signUp } = authContext;
 
+    const [click, setClick] = useState(false);
     const [user, setUser] = useState({
         firstName: '',
         lastName: '',
@@ -21,7 +21,7 @@ const SignUp = () => {
         setUser({ ...user, [e.target.name]: e.target.value });
     const createUser = e => {
         e.preventDefault();
-        e.target.disabled = true;
+        setClick(true);
         try {
             if (
                 firstName !== '' &&
@@ -37,6 +37,8 @@ const SignUp = () => {
                     email: '',
                     password: '',
                 });
+                e.target.disabled = true;
+                setClick(false);
             }
         } catch (error) {
             console.error(error);
@@ -50,7 +52,7 @@ const SignUp = () => {
             <div className='col-sm-6'>
                 <img src={Signup} alt='DesktopLogin' className='img-fluid' />
             </div>
-            <form className={`col-sm-6 ${styles.signup_form} was-validated`}>
+            <form className={`col-sm-6 ${click && 'was-validated'}`}>
                 <div className='input-group mb-3'>
                     <input
                         type='text'
