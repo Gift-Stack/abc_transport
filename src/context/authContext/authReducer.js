@@ -21,6 +21,7 @@ export default (state, action) => {
             return {
                 ...state,
                 loading: false,
+                isAuth: true,
                 user: action.payload.user,
             };
         case SIGN_UP_FAILED:
@@ -28,6 +29,7 @@ export default (state, action) => {
             return {
                 ...state,
                 loading: false,
+                isAuth: false,
                 user: null,
             };
         case ADD_NEW_USER_DATA_SUCCESS:

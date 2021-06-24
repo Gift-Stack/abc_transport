@@ -21,6 +21,7 @@ const SignUpState = ({ children }) => {
         user: null,
         isEmailVerified: false,
         emailVerificationMessage: null,
+        isAuth: false,
     };
 
     const [state, dispatch] = useReducer(AuthReducer, initialState);
@@ -85,6 +86,7 @@ const SignUpState = ({ children }) => {
                 user: state.user,
                 isEmailVerified: state.isEmailVerified,
                 emailVerificationMessage: state.emailVerificationMessage,
+                isAuth: state.isAuth,
                 setLoading,
                 signUp,
             }}
