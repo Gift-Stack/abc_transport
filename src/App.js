@@ -12,13 +12,13 @@ import SignUp from './pages/SignUp';
 
 import AuthState from './context/authContext/AuthState';
 import UnAuthenticatedRoute from './routing/UnAuthenticatedRoute';
-import { useContext } from 'react';
-import AuthContext from './context/authContext/authContext';
+// import { useContext } from 'react';
+// import AuthContext from './context/authContext/authContext';
 
 function App() {
-    const authContext = useContext(AuthContext);
-    const { loading } = authContext;
-    console.log(loading);
+    // const authContext = useContext(AuthContext);
+    // const { loading } = authContext;
+    // console.log(loading);
     // useEffect(() => {
     //     // getUser();
     //     console.log(loading);
