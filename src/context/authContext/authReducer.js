@@ -6,18 +6,21 @@ import {
     ADD_NEW_USER_DATA_FAILED,
     SEND_EMAIL_VERIFICATION_SUCCESS,
     SEND_EMAIL_VERIFICATION_FAILED,
-    // GET_USER,
+    GET_USER_SUCCESS,
+    GET_USER_FAIL,
 } from '../types';
 
 // eslint-disable-next-line
 export default (state, action) => {
-    switch (action) {
+    switch (action.type) {
         case LOADING:
             return {
                 ...state,
                 loading: true,
             };
         case SIGN_UP_SUCCESS:
+        case GET_USER_SUCCESS:
+            localStorage.setItem('user', action.payload.user);
             return {
                 ...state,
                 loading: false,
@@ -25,7 +28,10 @@ export default (state, action) => {
                 user: action.payload.user,
             };
         case SIGN_UP_FAILED:
+        case GET_USER_FAIL:
         case ADD_NEW_USER_DATA_FAILED:
+            localStorage.removeItem('user');
+
             return {
                 ...state,
                 loading: false,

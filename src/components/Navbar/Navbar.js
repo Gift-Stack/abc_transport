@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import logo from '../../images/ng-abctra-logo.png';
 import { Link } from 'react-router-dom';
 import hamburgerMenu from '../../images/icons/ham-menu@2x.png';
 
+import AuthContext from '../../context/authContext/authContext';
+
 const Navbar = () => {
+    const { isAuth, loading } = useContext(AuthContext);
     return (
         <div className='position-absolute w-100 navigation border-bottom border-white'>
             <nav className='navbar navbar-expand-md navbar-light bg-transparent justify-content-between px-4 nav-bar'>
@@ -76,32 +80,47 @@ const Navbar = () => {
                                 Hotel
                             </Link>
                         </li>
-                        <li className='nav-item px-1 my-1'>
-                            <Link
-                                to='/login'
-                                className='nav-link text-white btn border-white border-1 py-1 px-3 btn-other'
-                                href='#'
-                                style={{
-                                    fontWeight: 'bolder',
-                                    fontSize: 'small',
-                                }}
-                            >
-                                LOG IN
-                            </Link>
-                        </li>
-                        <li className='nav-item px-1 my-1'>
-                            <Link
-                                to='/signup'
-                                className='nav-link text-white btn py-1 px-3 secondary-btn'
-                                href='#'
-                                style={{
-                                    fontWeight: 'bolder',
-                                    fontSize: 'small',
-                                }}
-                            >
-                                SIGN UP
-                            </Link>
-                        </li>
+                        {isAuth && !loading && (
+                            <li className='nav-item px-1 my-1'>
+                                <Link
+                                    to='/my/profile'
+                                    className='nav-link text-white '
+                                    href='#'
+                                >
+                                    Profile
+                                </Link>
+                            </li>
+                        )}
+                        {!isAuth && !loading && (
+                            <li className='nav-item px-1 my-1'>
+                                <Link
+                                    to='/login'
+                                    className='nav-link text-white btn border-white border-1 py-1 px-3 btn-other'
+                                    href='#'
+                                    style={{
+                                        fontWeight: 'bolder',
+                                        fontSize: 'small',
+                                    }}
+                                >
+                                    LOG IN
+                                </Link>
+                            </li>
+                        )}
+                        {!isAuth && !loading && (
+                            <li className='nav-item px-1 my-1'>
+                                <Link
+                                    to='/signup'
+                                    className='nav-link text-white btn py-1 px-3 secondary-btn'
+                                    href='#'
+                                    style={{
+                                        fontWeight: 'bolder',
+                                        fontSize: 'small',
+                                    }}
+                                >
+                                    SIGN UP
+                                </Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </nav>

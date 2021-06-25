@@ -1,10 +1,11 @@
 import { useReducer } from 'react';
-import AuthReducer from './authReducer';
+import authReducer from './authReducer';
 import AuthContext from './authContext';
 import {
     LOADING,
     SIGN_UP_SUCCESS,
-    // GET_USER,
+    GET_USER_SUCCESS,
+    GET_USER_FAIL,
     ADD_NEW_USER_DATA_SUCCESS,
     ADD_NEW_USER_DATA_FAILED,
     SEND_EMAIL_VERIFICATION_SUCCESS,
@@ -14,7 +15,7 @@ import {
 
 import firebase from 'firebase';
 
-const SignUpState = ({ children }) => {
+const AuthState = ({ children }) => {
     const initialState = {
         loading: false,
         token: null,
@@ -24,9 +25,18 @@ const SignUpState = ({ children }) => {
         isAuth: false,
     };
 
-    const [state, dispatch] = useReducer(AuthReducer, initialState);
+    const [state, dispatch] = useReducer(authReducer, initialState);
 
     const setLoading = () => dispatch({ type: LOADING });
+
+    const getUser = () => {
+        const user = firebase.auth().currentUser;
+        if (user) {
+            dispatch({ type: GET_USER_SUCCESS, payload: user });
+        } else {
+            dispatch({ type: GET_USER_FAIL });
+        }
+    };
 
     const addData = async data => {
         const user = firebase.auth().currentUser;
@@ -51,7 +61,7 @@ const SignUpState = ({ children }) => {
                 dispatch({
                     type: SEND_EMAIL_VERIFICATION_SUCCESS,
                     payload:
-                        'You will recieve an email to verify your account ',
+                        'You will receive an email to verify your account ',
                 });
             })
             .catch(err => {
@@ -89,6 +99,7 @@ const SignUpState = ({ children }) => {
                 isAuth: state.isAuth,
                 setLoading,
                 signUp,
+                getUser,
             }}
         >
             {children}
@@ -96,4 +107,4 @@ const SignUpState = ({ children }) => {
     );
 };
 
-export default SignUpState;
+export default AuthState;
