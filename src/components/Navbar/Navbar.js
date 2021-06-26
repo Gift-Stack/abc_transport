@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import logo from '../../images/ng-abctra-logo.png';
 import { Link } from 'react-router-dom';
 import hamburgerMenu from '../../images/icons/ham-menu@2x.png';
@@ -9,7 +9,7 @@ import AuthContext from '../../context/authContext/authContext';
 const Navbar = () => {
     const { isAuth, loading } = useContext(AuthContext);
 
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    // const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     return (
         <div className='position-absolute w-100 navigation border-bottom border-white'>
             <nav
