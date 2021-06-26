@@ -97,7 +97,6 @@ const AuthState = ({ children }) => {
                 isEmailVerified: state.isEmailVerified,
                 emailVerificationMessage: state.emailVerificationMessage,
                 isAuth: state.isAuth,
-                setLoading,
                 signUp,
                 getUser,
             }}
