@@ -4,11 +4,11 @@ const ManageBooking = () => {
     return (
         <div className='' style={{ fontSize: 'small' }}>
             <div
-                className='d-md-flex text-center justify-content-md-between align-items-center w-100 px-sm-5 px-1 py-2'
+                className='d-sm-flex text-center justify-content-sm-between align-items-center w-100 px-sm-5 px-1 py-2'
                 style={{ background: '#00913e' }}
             >
                 <div className=''>
-                    <span className='pr-2 d-flex justify-content-center d-md-block'>
+                    <span className='pr-2 d-flex justify-content-center d-sm-inline-flex'>
                         <i className='bi bi-envelope-fill text-white'></i>{' '}
                         <a
                             className='text-white'
@@ -18,7 +18,7 @@ const ManageBooking = () => {
                             gkenny896@gmail.com
                         </a>
                     </span>
-                    <span className='pl-4 d-flex justify-content-center d-md-block'>
+                    <span className='pl-4 d-flex justify-content-center d-sm-inline-flex'>
                         <i className='bi bi-telephone-fill text-white'></i>{' '}
                         <a
                             className='text-white'
@@ -32,13 +32,13 @@ const ManageBooking = () => {
                 <div>
                     <Link
                         to='/agent/login'
-                        className='text-white d-flex justify-content-center d-md-block'
+                        className='text-white pr-2 d-flex justify-content-center d-sm-inline-flex'
                     >
                         Agent Login
                     </Link>
                     <Link
                         to='/agent/registration'
-                        className='text-white d-flex justify-content-center d-md-block'
+                        className='text-white pl-4 d-flex justify-content-center d-sm-inline-flex'
                     >
                         Agent Registration
                     </Link>
