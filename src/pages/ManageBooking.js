@@ -5,19 +5,20 @@ import Lagos from '../images/State destinations/lagos.jpg';
 const ManageBooking = () => {
     return (
         <div
-            className=''
+            className='text-white'
             style={{
                 fontSize: 'small',
                 backgroundImage: `url(${Lagos})`,
                 backgroundPosition: '100% 40%',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'fixed',
                 minHeight: '100vh',
             }}
         >
             <nav
                 className='navbar navbar-expand-md justify-content-between px-5 navbar-light'
-                style={{ backgroundColor: 'rgba(5, 190, 83, 0.3)' }}
+                style={{ backgroundColor: 'rgba(5, 190, 83, 0.5)' }}
             >
                 <Link to='/' className='navbar-brand' href='#'>
                     <img src={Logo} alt='Abc Transport' width={50} />
@@ -81,18 +82,22 @@ const ManageBooking = () => {
                         className='card p-md-5 py-5 px-3'
                         style={{ background: 'rgba(10, 9, 62, 0.5)' }}
                     >
+                        <h5 className='text-white mb-4'>Manage Booking</h5>
                         <div>
                             <label className='text-white'>
                                 Reference Number
                             </label>
-                            <input type='text' className='form-control mb-4' />
+                            <input type='text' className='form-control mb-3' />
                         </div>
                         <div>
                             <label className='text-white'>
                                 Email/Phone Number
                             </label>
-                            <input type='text' className='form-control' />
+                            <input type='text' className='form-control mb-4' />
                         </div>
+                        <button type='submit' className='btn btn-success'>
+                            Search Ticket
+                        </button>
                     </div>
                 </div>
             </div>
