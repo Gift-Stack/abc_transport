@@ -81,7 +81,7 @@ const ManageBooking = () => {
                         className='card p-md-5 py-5 px-3'
                         style={{ background: 'rgba(10, 9, 62, 0.5)' }}
                     >
-                        <div className>
+                        <div>
                             <label className='text-white'>
                                 Reference Number
                             </label>
