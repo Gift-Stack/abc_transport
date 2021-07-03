@@ -8,6 +8,8 @@ import {
     SEND_EMAIL_VERIFICATION_FAILED,
     GET_USER_SUCCESS,
     GET_USER_FAIL,
+    SIGN_IN_SUCCESS,
+    SIGN_IN_FAILED,
 } from '../types';
 
 // eslint-disable-next-line
@@ -20,6 +22,7 @@ export default (state, action) => {
             };
         case SIGN_UP_SUCCESS:
         case GET_USER_SUCCESS:
+        case SIGN_IN_SUCCESS:
             localStorage.setItem('user', action.payload.user);
             return {
                 ...state,
@@ -29,6 +32,7 @@ export default (state, action) => {
             };
         case SIGN_UP_FAILED:
         case GET_USER_FAIL:
+        case SIGN_IN_FAILED:
         case ADD_NEW_USER_DATA_FAILED:
             localStorage.removeItem('user');
 

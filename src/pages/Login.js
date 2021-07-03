@@ -1,8 +1,13 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginImg from '../images/svg/Login.svg';
 
+import AuthContext from '../context/authContext/authContext';
+
 const Login = () => {
+    const authContext = useContext(AuthContext);
+    const { signIn } = authContext;
+
     const [click, setClick] = useState(false);
     const [user, setUser] = useState({
         email: '',
@@ -17,17 +22,14 @@ const Login = () => {
     const loginUser = e => {
         e.preventDefault();
         setClick(true);
-        try {
-            if (email !== '' && password !== '') {
-                setUser({
-                    email: '',
-                    password: '',
-                });
-                e.target.disabled = true;
-                setClick(false);
-            }
-        } catch (error) {
-            console.error(error);
+        if (email !== '' && password !== '') {
+            signIn(email, password);
+            setUser({
+                email: '',
+                password: '',
+            });
+            e.target.disabled = true;
+            setClick(false);
         }
     };
 

@@ -11,6 +11,8 @@ import {
     SEND_EMAIL_VERIFICATION_SUCCESS,
     SEND_EMAIL_VERIFICATION_FAILED,
     SIGN_UP_FAILED,
+    SIGN_IN_SUCCESS,
+    SIGN_IN_FAILED,
 } from '../types';
 
 import firebase from 'firebase';
@@ -22,7 +24,7 @@ const AuthState = ({ children }) => {
         user: null,
         isEmailVerified: false,
         emailVerificationMessage: null,
-        isAuth: false,
+        isAuth: localStorage.user && true,
     };
 
     const [state, dispatch] = useReducer(authReducer, initialState);
@@ -79,13 +81,43 @@ const AuthState = ({ children }) => {
             const createAccount = await firebase
                 .auth()
                 .createUserWithEmailAndPassword(email, password);
-            await addData(data);
-            await verifyEmail();
+            addData(data);
+            verifyEmail();
 
             dispatch({ type: SIGN_UP_SUCCESS, payload: createAccount });
         } catch (error) {
             dispatch({ type: SIGN_UP_FAILED, payload: error });
         }
+    };
+
+    const signIn = (email, password) => {
+        firebase
+            .auth()
+            .setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+            .then(() => {
+                // Existing and future Auth states are now persisted in the current
+                // session only. Closing the window would clear any existing state even
+                // if a user forgets to sign out.
+                // ...
+                // New sign-in will be persisted with session persistence.
+                firebase.auth().signInWithEmailAndPassword(email, password);
+                dispatch({
+                    type: SIGN_IN_SUCCESS,
+                    payload: firebase
+                        .auth()
+                        .signInWithEmailAndPassword(email, password),
+                });
+
+                console.log(
+                    firebase.auth().signInWithEmailAndPassword(email, password),
+                );
+            })
+            .catch(error => {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode + ': ' + errorMessage);
+            });
     };
 
     return (
@@ -98,6 +130,7 @@ const AuthState = ({ children }) => {
                 emailVerificationMessage: state.emailVerificationMessage,
                 isAuth: state.isAuth,
                 signUp,
+                signIn,
                 getUser,
             }}
         >
