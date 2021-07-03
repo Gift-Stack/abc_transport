@@ -117,6 +117,7 @@ const AuthState = ({ children }) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 console.log(errorCode + ': ' + errorMessage);
+                dispatch({ type: SIGN_IN_FAILED, payload: error });
             });
     };
 
