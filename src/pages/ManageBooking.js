@@ -17,7 +17,7 @@ const ManageBooking = () => {
             }}
         >
             <nav
-                className='navbar navbar-expand-md justify-content-between px-5 navbar-light'
+                className='navbar navbar-expand-md justify-content-between px-3 px-md-5 navbar-light'
                 style={{ backgroundColor: 'rgba(5, 190, 83, 0.5)' }}
             >
                 <Link to='/' className='navbar-brand' href='#'>
