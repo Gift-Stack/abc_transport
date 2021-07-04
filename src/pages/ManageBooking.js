@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../images/ng-abctra-logo.png';
-import Lagos from '../images/State destinations/lagos.jpg';
+import Express from '../images/executive-express.jpg';
 
 const ManageBooking = () => {
     return (
@@ -8,7 +8,7 @@ const ManageBooking = () => {
             className='text-white'
             style={{
                 fontSize: 'small',
-                backgroundImage: `url(${Lagos})`,
+                backgroundImage: `url(${Express})`,
                 backgroundPosition: '100% 40%',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
