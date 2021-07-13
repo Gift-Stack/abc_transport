@@ -1,3 +1,4 @@
+import { useEffect, useContext } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,16 +13,16 @@ import SignUp from './pages/SignUp';
 
 import AuthState from './context/authContext/AuthState';
 import UnAuthenticatedRoute from './routing/UnAuthenticatedRoute';
-// import { useContext } from 'react';
 // import AuthContext from './context/authContext/authContext';
 
 function App() {
-    // const authContext = useContext(AuthContext);
-    // const { loading } = authContext;
+    // console.log(useContext(AuthContext));
+    // const { loading, getUser } = useContext(AuthContext);
+    // const  = authContext;
     // console.log(loading);
+    // getUser();
     // useEffect(() => {
-    //     // getUser();
-    //     console.log(loading);
+    //     getUser();
     // }, []);
     return (
         <AuthState>

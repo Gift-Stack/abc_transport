@@ -23,12 +23,12 @@ export default (state, action) => {
         case SIGN_UP_SUCCESS:
         case GET_USER_SUCCESS:
         case SIGN_IN_SUCCESS:
-            localStorage.setItem('user', action.payload.user);
+            localStorage.setItem('user', action.payload);
             return {
                 ...state,
                 loading: false,
                 isAuth: true,
-                user: action.payload.user,
+                user: action.payload,
             };
         case SIGN_UP_FAILED:
         case GET_USER_FAIL:
