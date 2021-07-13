@@ -1,14 +1,14 @@
 const About = () => {
     return (
         <div
-            className='d-flex justify-content-center align-items-center mx-5'
+            className='d-flex justify-content-center align-items-center text-center'
             style={{ height: '100vh', lineHeight: 1 }}
         >
             <div>
                 <p>
-                    ABC Transport. Project is a bootstrap of{' '}
+                    ABC Transport. This project is a bootstrap + modification of{' '}
                     <a
-                        href='https://abctransport.com'
+                        href='https://www.abctransport.com'
                         target='_blank'
                         rel='noreferrer'
                         style={{ color: '#05be53' }}
