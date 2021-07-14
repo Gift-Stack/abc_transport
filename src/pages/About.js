@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <div
-            className='d-flex justify-content-center align-items-center text-center mx-3'
+            className='d-flex justify-content-center align-items-center mx-3'
             style={{ height: '100vh', lineHeight: 1 }}
         >
             <div>
